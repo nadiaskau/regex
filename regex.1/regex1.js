@@ -1,13 +1,22 @@
 
-let str = '<p href="missme" class="test"><a href="/CustomContentProcess.aspx?CCID=13524&amp;OID=3936923&amp;A=Delete" onclick="">delete</a></p>'
-    
+let str = '<p href="missme" class="test"><a href="www.dkexit.eu/asdfasdfas" onclick="">delete</a></p>'
+
 function getTagAndUrl(page){
-    
-    var patt = /<a href="(.*)"/g;
-    while(match=patt.exec(str)){
-        
+
+    let urlw = /<a href="(.*?)"/g;
+    let url = /(.*?)<\/a>/g;
+    while(match=url.exec(str)){
+      debugger;
+
     	console.log(match[1]);
     }
+/*
+    while(match2=txt.exec(str)){
+
+    	console.log(match2[1]);
+    }
+
+    console.log(txt);*/
 }
 
 
